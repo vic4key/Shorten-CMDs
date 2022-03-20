@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat ~/.bash_history | sort -u | grep --color=auto -Hin $*

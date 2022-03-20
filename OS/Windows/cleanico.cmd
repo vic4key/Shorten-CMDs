@@ -1,0 +1,10 @@
+@ECHO OFF
+
+IE4UINIT.EXE -ClearIconCache
+
+TASKKILL /F /IM explorer.exe
+ECHO.
+
+TIMEOUT /T 3
+
+START EXPLORER.EXE

@@ -1,0 +1,6 @@
+@ECHO OFF
+
+SET TARGET_NAME=%1
+SET TARGET_MSG=%2
+
+MSG /V /W /server:%TARGET_NAME% console %TARGET_MSG%

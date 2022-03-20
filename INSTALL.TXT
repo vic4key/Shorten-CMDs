@@ -1,0 +1,1 @@
+Add all sub-directories to %PATH% for global using via Command Prompt
