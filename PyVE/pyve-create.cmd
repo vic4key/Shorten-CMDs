@@ -18,6 +18,10 @@ IF %NARGS% NEQ 1 (
 
 virtualenv %1
 
+CD %CD%\%1
+
+PYVE-ACTIVE .
+
 :: Exit
 
 GOTO L_EXIT

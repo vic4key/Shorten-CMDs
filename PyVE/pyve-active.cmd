@@ -35,6 +35,8 @@ IF %NARGS% EQU 0 (
 	GOTO L_INVALID_NARGS
 )
 
+ECHO "CD %1"
+
 :: Exit
 
 GOTO L_EXIT
