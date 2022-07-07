@@ -18,6 +18,8 @@ ECHO    9.  openssl-gen-cert-key.cmd - Generate a certification key file
 ECHO    10. openssl-gen-cert-csr.cmd - Generate a ca-signed certification file
 ECHO    11. openssl-gen-cert-crt.cmd - Generate a certification file
 ECHO    12. openssl-view-cert.cmd    - View a certification file
+ECHO    -
+ECHO    13. openssl-gen-self-signed-pem.cmd - Generate a self-signed .pem file (for ssl certificate, server, etc)
 
 :: FOR /R %%i IN (openssl-*.cmd) DO (
 ::	ECHO 	%%~nxi
