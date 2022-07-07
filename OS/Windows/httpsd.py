@@ -2,7 +2,7 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 import ssl
 import os
 
-endpoint = ("localhost", 443)
+endpoint = ("0.0.0.0", 443)
 httpd = HTTPServer(endpoint, SimpleHTTPRequestHandler)
 
 cdir = os.path.dirname(os.path.realpath(__file__))
