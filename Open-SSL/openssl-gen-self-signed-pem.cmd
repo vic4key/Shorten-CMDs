@@ -36,11 +36,11 @@ ECHO	Example: openssl-gen-self-signed-pem.cmd self-signed.pem self-signed.pem
 
 :L_EXIT
 
-rem https://www.suse.com/support/kb/doc/?id=000018152
-rem openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+:: https://www.suse.com/support/kb/doc/?id=000018152
+:: 	openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
 
-rem https://serverfault.com/questions/889581/how-to-generate-a-pem-certificate-in-an-easy-way-for-testing
-rem first generate CSR and KEY
-rem openssl req -new -newkey rsa:4096 -nodes -keyout snakeoil.key -out snakeoil.csr
-rem then generate PEM and self-sign with KEY
-rem openssl x509 -req -sha256 -days 365 -in snakeoil.csr -signkey snakeoil.key -out snakeoil.pem
+:: https://serverfault.com/questions/889581/how-to-generate-a-pem-certificate-in-an-easy-way-for-testing
+:: 	first generate CSR and KEY
+:: 		openssl req -new -newkey rsa:4096 -nodes -keyout snakeoil.key -out snakeoil.csr
+:: then generate PEM and self-sign with KEY
+:: 		openssl x509 -req -sha256 -days 365 -in snakeoil.csr -signkey snakeoil.key -out snakeoil.pem
