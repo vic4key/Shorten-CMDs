@@ -16,9 +16,9 @@ IF %NARGS% NEQ 1 (
 
 :: Remove
 
-SET repos_url=%1
-git submodule deinit %repos_url%
-git rm %repos_url%
+SET repos_sub_module_dir=%1
+git submodule deinit -f %repos_sub_module_dir%
+git rm %repos_sub_module_dir%
 
 :: Exit
 
@@ -30,7 +30,7 @@ GOTO L_EXIT
 ECHO	Usage: git-sub-remove #1
 ECHO		#1 -^> The sub-module name
 ECHO	Example:
-ECHO		git-sub-remove example
+ECHO		git-sub-remove local/path/to/sub-module
 
 :: Exit
 
