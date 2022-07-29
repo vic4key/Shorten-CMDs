@@ -28,6 +28,7 @@ IF %NARGS% EQU 0 (
 		%CD%\Scripts\%AFN%.bat
 	) ELSE IF EXIST %CD%\%1\Scripts\%AFN%.bat (
 		%CD%\%1\Scripts\%AFN%.bat
+		CD "%CD%\%1"
 	) ELSE (
 		GOTO L_INVALID_NARGS
 	)
