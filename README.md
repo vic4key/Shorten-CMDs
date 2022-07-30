@@ -2,6 +2,6 @@
 
 #### Shorten commands for those who have bad-memory or lazy
 
-Add all sub-directories to `%PATH%` for global using via `Command Prompt`
+Just run `INSTALL.CMD` to get it done.
 
 Website: https://vic.onl/
