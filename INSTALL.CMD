@@ -37,6 +37,11 @@ IF [%conditions%]==[1] (
 
 :: ECHO %SHORTEN_CLI_DIRS%
 
+:: Install required
+
+ECHO Installing required ...
+pip install virtualenv
+
 :: Make backup file path with date time format eg. 20221221_1234
 
 SET _DELIMITER=
