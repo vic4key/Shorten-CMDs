@@ -1,0 +1,5 @@
+@ECHO OFF
+
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+FOR %%i IN (dns-select-*.bat) DO @ECHO %%~ni
