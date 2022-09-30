@@ -20,7 +20,7 @@ IF [%confirm%]==[1] (
   GOTO L_CANCELLED
 )
 
-SET SHORTEN_CLI_DIRS=%CD%\OS\Windows;%CD%\GitHub;%CD%\PyVE;%CD%\Open-SSL;%CD%\DNS
+SET SHORTEN_CLI_DIRS=%CD%\OS\Windows;%CD%\GitHub;%CD%\PyVE;%CD%\Open-SSL;%CD%\DNS;%CD%\VCPkg
 
 :: Ask for OS platform and update OS's relevant dirs to SHORTEN_CLI_DIRS
 
