@@ -18,7 +18,7 @@ IF %NARGS% NEQ 1 (
 
 SET repos_sub_module_dir=%1
 git submodule deinit -f %repos_sub_module_dir%
-git rm %repos_sub_module_dir%
+git rm -f %repos_sub_module_dir%
 
 :: Exit
 
