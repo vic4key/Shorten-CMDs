@@ -15,6 +15,9 @@ SET AFN=activate
 IF %NARGS% EQU 0 (
 	IF EXIST %CD%\Scripts\%AFN%.bat (
 		%CD%\Scripts\%AFN%.bat
+		IF EXIST %CD%\.env (
+			FOR /f "delims=" %%x in ('TYPE .env') DO SET %%x
+		)
 	) ELSE (
 		GOTO L_INVALID_NARGS
 	)
@@ -22,12 +25,18 @@ IF %NARGS% EQU 0 (
 	IF [%1]==[.] (
 		IF EXIST %CD%\Scripts\%AFN%.bat (
 			%CD%\Scripts\%AFN%.bat
+			IF EXIST %CD%\.env (
+				FOR /f "delims=" %%x in ('TYPE .env') DO SET %%x
+			)
 		) ELSE (
 			GOTO L_INVALID_NARGS
 		)
 		%CD%\Scripts\%AFN%.bat
 	) ELSE IF EXIST %CD%\%1\Scripts\%AFN%.bat (
 		%CD%\%1\Scripts\%AFN%.bat
+		IF EXIST %CD%\%1\.env (
+			FOR /f "delims=" %%x in ('TYPE %CD%\%1\.env') DO SET %%x
+		)
 		CD "%CD%\%1"
 	) ELSE (
 		GOTO L_INVALID_NARGS
