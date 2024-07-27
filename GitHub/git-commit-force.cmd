@@ -1,3 +1,3 @@
 @ECHO OFF
 
-git push --force origin master
+git push --force %1 %2 %3 %4 %5 %6 %7

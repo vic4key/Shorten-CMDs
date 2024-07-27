@@ -27,7 +27,7 @@ IF [%response%]==[Y] SET confirm=1
 IF [%response%]==[y] SET confirm=1
 
 IF [%confirm%]==[1] (
-  git push origin master
+  git push
 ) ELSE (
   ECHO Canceled
 )

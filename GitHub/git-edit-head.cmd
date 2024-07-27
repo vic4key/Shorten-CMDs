@@ -12,8 +12,8 @@ IF [%confirm%]==[0] (
 )
 
 SET /p type=[+] Edit Message or Files ? 
-IF /I %type%==m (
-  git commit --amend
+IF NOT [%type%]==[] (
+  git commit --amend -m %type%
 ) ELSE (
   git commit --amend --no-edit
 )

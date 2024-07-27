@@ -13,5 +13,5 @@ FOR %%I IN (%*) DO (
 IF %NARGS% NEQ 0 (
 	git pull --no-rebase origin %1 %2 %3
 ) ELSE (
-  git pull origin master
+  git pull
 )
