@@ -11,7 +11,7 @@ IF [%confirm%]==[0] (
   GOTO L_CANCELLED
 )
 
-SET /p type=[+] Edit Message or Files ? 
+SET /p type=[+] Enter the new commit message : 
 IF NOT [%type%]==[] (
   git commit --amend -m %type%
 ) ELSE (
