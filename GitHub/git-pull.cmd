@@ -1,5 +1,7 @@
 @ECHO OFF
 
+SETLOCAL ENABLEDELAYEDEXPANSION
+
 :: N-Args
 
 SET NARGS=0
@@ -10,8 +12,13 @@ FOR %%I IN (%*) DO (
 
 :: Status/Differences
 
-IF %NARGS% NEQ 0 (
-	git pull --no-rebase origin %1 %2 %3
+IF !NARGS! NEQ 0 (
+    git pull --no-rebase origin !ARGV[1]! !ARGV[2]! !ARGV[3]!
 ) ELSE (
-  git pull
+    FOR /F "delims=" %%i IN ('git branch --show-current') DO (
+        SET "BRANCH_NAME=%%i"
+        git pull --no-rebase -- "origin" !BRANCH_NAME!
+    )
 )
+
+ENDLOCAL
